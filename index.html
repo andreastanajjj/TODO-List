@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Lista Ime</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container py-4">
+      <h1 class="mb-4">TODO Lista</h1>
+
+      <div class="app-container">
+        <div class="sidebar">
+          <div class="form-card">
+            <h3 class="form-title">
+              <i class="bi bi-plus-circle"></i> Shto Detyrë të Re
+            </h3>
+
+            <form id="taskForm">
+              <div class="form-group">
+                <label for="taskTitle">Titulli i Detyrës</label>
+                <input
+                  type="text"
+                  id="taskTitle"
+                  style="color: white"
+                  class="form-control"
+                  placeholder="Shëno titullin..."
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="taskPriority">Prioriteti</label>
+                <select id="taskPriority" class="form-select">
+                  <option value="high">Prioritet i Lartë</option>
+                  <option value="medium">Prioritet i Mesëm</option>
+                  <option value="low">Prioritet i Ulët</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <i class="bi bi-plus-circle"></i> Shto Detyrë
+              </button>
+
+              <input type="hidden" id="editIndex" />
+            </form>
+          </div>
+        </div>
+
+        <div class="main-content">
+          <div class="tasks-section">
+            <h3 class="section-title">
+              <i class="bi bi-list-check"></i> Detyrat e Mia
+            </h3>
+
+            <div id="taskList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

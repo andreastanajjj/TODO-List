@@ -1,0 +1,275 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+h1 {
+  color: #9c64ff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .app-container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 35%;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+  }
+
+  .main-content {
+    width: 65%;
+  }
+}
+
+.form-card {
+  background: #1e1e1e;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+
+.form-title {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-title i {
+  color: #9c64ff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+}
+
+.form-control,
+.form-select {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #e0e0e0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #333;
+  border-color: #9c64ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(156, 100, 255, 0.25);
+}
+
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%239c64ff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+  padding-right: 40px;
+}
+
+.btn-submit {
+  background: #9c64ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+  background: #8a50e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(156, 100, 255, 0.25);
+}
+
+.tasks-section {
+  background: transparent;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title i {
+  color: #9c64ff;
+}
+
+.task-card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.priority-high {
+  border-color: #ff5252;
+}
+
+.priority-medium {
+  border-color: #ffb142;
+}
+
+.priority-low {
+  border-color: #2ed573;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.task-badge {
+  color: #888;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.task-badge i {
+  font-size: 0.9rem;
+}
+
+.priority-high .priority-icon {
+  color: #ff5252;
+}
+
+.priority-medium .priority-icon {
+  color: #ffb142;
+}
+
+.priority-low .priority-icon {
+  color: #2ed573;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-action {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-edit {
+  background: #2c2c2c;
+  color: #ffb142;
+}
+
+.btn-edit:hover {
+  background: #3a3a3a;
+}
+
+.btn-delete {
+  background: #2c2c2c;
+  color: #ff5252;
+}
+
+.btn-delete:hover {
+  background: #3a3a3a;
+}
+
+.empty-tasks {
+  text-align: center;
+  padding: 40px 0;
+  color: #777;
+}
+
+.empty-tasks i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-card {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  color: #666;
+}
